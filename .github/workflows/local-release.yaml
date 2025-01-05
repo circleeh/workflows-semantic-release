@@ -1,0 +1,21 @@
+name: Local Release
+
+on:
+  push:
+    branches:
+      - main
+      - alpha
+      - beta
+  workflow_dispatch:
+
+jobs:
+  semantic-release:
+    name: Create Release
+    uses: ./.github/workflows/semantic-release.yaml
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+    # Optional customizations - uncomment if needed
+    # with:
+    #   node-version: 'lts/*'
+    #   extra-plugins: '@semantic-release/git @semantic-release/changelog'
+    #   fetch-depth: 0
