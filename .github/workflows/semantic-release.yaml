@@ -23,14 +23,6 @@ on:
         description: 'GitHub token for authentication'
         required: true
 
-  # Keep direct triggers for backward compatibility
-  push:
-    branches:
-      - main
-      - alpha
-      - beta
-  workflow_dispatch:
-
 jobs:
   release:
     name: Semantic Release
