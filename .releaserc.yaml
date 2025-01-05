@@ -11,6 +11,7 @@ plugins:
   - '@semantic-release/changelog'  # Plugin documentation: https://github.com/semantic-release/changelog
   - '@semantic-release/github'  # Plugin documentation: https://github.com/semantic-release/github
   - '@semantic-release/git'  # Plugin documentation: https://github.com/semantic-release/git
+  - 'semantic-release-major-tag'
 analyzeCommits:
   - path: '@semantic-release/commit-analyzer'
     preset: conventionalcommits
@@ -28,3 +29,6 @@ git:
     assets:
       - CHANGELOG.md
     message: 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
+customTags:
+  - v${major}
+  - v${major}.${minor}

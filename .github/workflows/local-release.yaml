@@ -15,4 +15,4 @@ jobs:
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
     with:
-      extra-plugins: '@semantic-release/git @semantic-release/changelog conventional-changelog-conventionalcommits'
+      extra-plugins: '@semantic-release/git @semantic-release/changelog conventional-changelog-conventionalcommits semantic-release-major-tag'
