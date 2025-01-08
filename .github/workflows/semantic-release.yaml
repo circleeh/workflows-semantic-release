@@ -10,7 +10,7 @@ on:
         type: string
       extra-plugins:
         description: 'Additional semantic-release plugins to install'
-        default: '@semantic-release/git @semantic-release/changelog'
+        default: '@semantic-release/git @semantic-release/changelog @semantic-release/commit-analyzer'
         required: false
         type: string
       fetch-depth:
@@ -47,8 +47,8 @@ jobs:
       - name: Install dependencies
         run: |
           npm install -g semantic-release @semantic-release/git \
-            @semantic-release/github @semantic-release/changelog
-
+            @semantic-release/github @semantic-release/changelog \
+            @semantic-release/commit-analyzer
       - name: Install extra plugins
         if: inputs.extra-plugins
         run: npm install -g ${{ inputs.extra-plugins }}

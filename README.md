@@ -52,7 +52,7 @@ with:
 | Name            | Description                         | Required | Default                                             |
 | --------------- | ----------------------------------- | -------- | --------------------------------------------------- |
 | `node-version`  | Node.js version to use              | No       | `lts/*`                                             |
-| `extra-plugins` | Additional semantic-release plugins | No       | `@semantic-release/git @semantic-release/changelog` |
+| `extra-plugins` | Additional semantic-release plugins | No       | `@semantic-release/git @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/github` |
 | `fetch-depth`   | Number of commits to fetch          | No       | `0`                                                 |
 
 ## Secrets
